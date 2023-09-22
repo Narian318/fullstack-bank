@@ -48,7 +48,7 @@ pipeline {
         
         stage('Backend') {
             steps {
-                dir('/root/.jenkins/workspace/naren-bankapp/app/backend') {
+                dir('/var/lib/jenkins/workspace/naren-bankapp/app/backend') {
                     sh "npm install"
                 }
             }
@@ -56,7 +56,7 @@ pipeline {
         
         stage('frontend') {
             steps {
-                dir('/root/.jenkins/workspace/naren-bankapp/app/frontend') {
+                dir('/var/lib/jenkins/workspace/naren-bankapp/app/frontend') {
                     sh "npm install"
                 }
             }
